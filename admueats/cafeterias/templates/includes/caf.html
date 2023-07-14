@@ -1,0 +1,13 @@
+{% load static %}
+
+<li>
+  <article class="cafeteria">
+    <a href="{% url "cafeteria-detail-page" cafeteria.slug %}">
+      <img src="{% static "store/images/"|add:cafeteria.image %}" alt={{ cafeteria.title }}
+      />
+      <div class="cafeteria__content">
+        <h3>{{ cafeteria.title }}</h3>
+      </div>
+    </a>
+  </article>
+</li>
